@@ -8,7 +8,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 header {
@@ -27,6 +26,10 @@ header {
   justify-content: center;
 }
 
+.logo-mobile {
+  display: none;
+}
+
 .logo-img img {
   height: 36px;
 }
@@ -40,6 +43,10 @@ nav {
 
   border-top: 1px solid #F5F6F7;
   border-bottom: 1px solid #F5F6F7;
+}
+
+.navbar-mobile {
+  display: none;
 }
 
 ul {
@@ -123,6 +130,10 @@ ul li {
   margin-bottom: 1.8125rem;
 }
 
+.principal-content {
+  margin-bottom: 1.5625rem;
+}
+
 .principal-content p {
   font-size: 1.125rem;
   font-weight: 500;
@@ -130,9 +141,8 @@ ul li {
   color: #303134;
 }
 
-.principal-content p + p { 
+.principal-content a + a { 
   margin-top: .5rem;
-  margin-bottom: 1.5625rem;
 }
 
 .divider-row {
@@ -222,4 +232,239 @@ p {
 
 .gshow-new p + p {
   margin-top: 9px;
+}
+
+a:hover {
+  transition: all 0.2s;
+  filter: opacity(0.6);
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .logo-web {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+  }
+
+  .logo-img img {
+    height: 57px;
+  }
+
+  nav {
+    border-color: #E6E6E6;
+    height: 60px;
+  }
+
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .navbar-web {
+    display: none;
+  }
+
+  .g1 a {
+    color: #A80001;
+  }
+
+  .ge a {
+    color: #06AA48;
+  }
+
+  .gshow a {
+    color: #FF7F00;
+  }
+
+  .tech a {
+    color: #666666;
+  }
+
+  .videos a {
+    color: #0769DE;
+  }
+
+  .content {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    min-height: 0;
+    height: 100%;
+
+    margin-top: 1.15rem;
+    padding: 0 1rem;
+  }
+
+  .g1-content {
+    width: 100%;
+    max-width: 100%;
+
+  }
+
+  .principal-content {
+    border-bottom: 1px solid #E6E6E6;
+  }
+  
+  .principal-content h1 {
+    font-size: 2.2857rem;
+    line-height: 2.8671rem;
+    margin-bottom: 1rem;
+  }
+
+  .principal-content p {
+    font-size: 1.2857rem;
+    line-height: 1.7857rem;
+    font-weight: 700;
+    color: #CD150B;
+  }
+
+  .principal-content p + p { 
+    margin-bottom: 1rem;
+  }
+
+  .g1-news-with-images, .ge-content, .gshow-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .new-container-mobile {
+    display: flex;
+  }
+  
+  .g1-new, .ge-new, .gshow-new {
+    width: 100%;
+    padding-top: 1.4284rem;
+    border-bottom: 1px solid #E6E6E6;
+  }
+
+  .new-container-mobile img {
+    width: 120px;
+    height: 67px;
+    border-radius: 4px;
+    margin-right: 1rem;
+  }
+
+  span {
+    display: none;
+  }
+
+  .new-container-mobile h2, .g1-news-without-images h2 {
+    font-size: 1.2857rem;
+    line-height: 1.7857rem;
+  }
+
+  .g1-new h2, .g1-new p {
+    color: #CD150B;
+
+  }
+
+  .ge-new h2, .ge-new p {
+    color: #06AA48;
+
+  }
+
+  .gshow-new h2, .gshow-new p {
+    color: #FF8203;
+
+  }
+
+  .g1-new p, .ge-new p, .gshow-new p{
+    font-size: 1.1428rem;
+    line-height: 1.3571rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .g1-news-without-images {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .divider-row, .divider-column {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 960px){
+  ul {
+    justify-content: space-around;
+  }
+
+  .content {
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .divider-column {
+    display: none;
+  }
+
+  .g1-content {
+    margin-bottom: 2.25rem;
+  }
+
+  .ge-content, .gshow-content {
+    padding-top: 2rem;
+    width: 100%;
+    max-width: 624px;
+    border-top: 1px solid #EBEDEF;
+    margin-bottom: 2.25rem;
+
+    display: flex;
+
+  }
+  
+  .ge-new, .gshow-new {
+    width: 193px;
+  }
+
+
+  .ge-content, .gshow-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1249px) {
+  ul {
+    justify-content: space-around;
+  }
+  
+  .ge-gshow {
+    display: none;
+  }
+
+  .gshow-content {
+    padding-top: 2rem;
+    width: 100%;
+    height: auto;
+    /* max-width: 624px; */
+    margin-bottom: 2.25rem;
+
+    display: flex;
+
+  }
+  
+  .gshow-new {
+    width: 193px;
+  }
+
+
+  .gshow-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
