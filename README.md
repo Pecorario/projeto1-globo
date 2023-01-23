@@ -10,4 +10,4 @@ Criação de um layout mais simplificado da página de notícias globo.com, dese
 ## 🔗 Acesso
 Você pode acessar o site de produção do repositório através do link:
 
-- [globo.com](https://pecorario.github.io/globo/)
+- [globo.com](https://pecorario.github.io/projeto1-globo/)
